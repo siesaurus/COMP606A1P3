@@ -1,8 +1,6 @@
 * {box-sizing: border-box;}
 
-html {
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 
 /* Style the navbar */
 .topnav {
@@ -12,10 +10,32 @@ html {
 
 /* styling to position the nav links to centre of screen */
 .mainbar {
-    width: 930px;
+    width: 990px;
     margin: auto;
     padding: 0 15px;
     position: relative;
+}
+
+/* The b-ground design we'll use on all of our pages */
+body {
+  background-color: #fab478;
+}
+
+/* the Div class we can put all of our content into */
+.mainContent {
+  margin: auto;
+  width: 930px;
+  height: 1000px;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  position: relative;
+  background-color: white;
+}
+
+/* Styling we will use for all paragraph content */
+P {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* CSS style for the nav links*/
@@ -39,6 +59,7 @@ html {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Navbar links on mouse-over */

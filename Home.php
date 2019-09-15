@@ -5,11 +5,19 @@
 <link ref style.css>
 <!DOCTYPE html>
 <html>
-<title>Home</title>
+<title>HomePage</title>
 
-<body>
-Weeeeeeelcome back!
-</body>
+    <body>
+
+        <div class ="mainContent" id ="mainCon">
+
+            <p>
+            Weeeeeeelcome back!
+            </p>
+
+        </div>
+        
+    </body>
 
 </html>
 
