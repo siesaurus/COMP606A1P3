@@ -11,8 +11,11 @@
 
         <div class ="mainContent" id ="mainCon">
 
+            <h2>
+                Why Choose Us?
+            </h2>   
             <p>
-            Weeeeeeelcome back!
+                Weeeeeeelcome back!
             </p>
 
         </div>
