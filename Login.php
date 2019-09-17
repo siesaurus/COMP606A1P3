@@ -31,11 +31,19 @@ if ($stmt = $mysqli->prepare($sql)) {
                     $_SESSION['Email'] = $email;
                     header('location: welcome.php');
                 } else{ 
-                    Echo "The password you entered was incorrect!";
+                    Echo "<div class=formContainer>";
+                    Echo "The password you entered was incorrect! ";
+                    Echo "Press this button to try again<br>";
+                    Echo "&nbsp &nbsp<a href=LoginPage.php><button>Try Again</button></a>";
+                    Echo "</div>";
                 }
             }
         } else{ 
-            Echo "Sorry, no account with that email found! Please make sure you have registered.";
+            Echo "<div class=formContainer>";
+            Echo "Sorry, no account with that email found! Please make sure you have registered.<br>";
+            Echo "Press this button to Register now!<br>";
+            Echo "&nbsp &nbsp<a href=Registration.php><button>Register</button></a>";
+            Echo "</div>";
         }
     } else{ 
         echo "Oops! Something went wrong. Please try again later"; 

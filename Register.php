@@ -39,11 +39,20 @@ $stmt = $mysqli->prepare($SELECT);
       $stmt->execute();
       $stmt->close();
 
-      echo "Thank you for registering! Please login.";
+      Echo "<div class=formContainer>";
+      echo "Thank you for registering! Please login.<br>";
+      Echo "&nbsp &nbsp<a href=Registration.php><button>Register</button></a>";
+      Echo "</div>";
+      
      } else {
-      echo "Someone already register using this email";
+        Echo "<div class=formContainer>";
+        echo "We're sorry, someone has already registered using this email.<br>";
+        echo "Please try again.<br>";
+        Echo "&nbsp &nbsp<a href=Registration.php><button>Try Again</button></a>";
+        Echo "</div>";
       $stmt->close;
      }
+     
       //https://www.codeandcourse.com/2018/03/how-to-connect-html-register-form-to-mysql-database-with-php/
       //got stuck on correct way to insert into database
     }

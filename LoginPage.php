@@ -24,6 +24,7 @@
         <td><input type = "password" placeholder="Password" name = "Passwd"></td>
         </tr>   
         <tr>
+            <td></td>
         <td><input type = "submit" value ="Login"></td>
         </tr>
         </table>
