@@ -135,3 +135,14 @@ h2 {
   }
 }
 /*as per w3schools.com https://www.w3schools.com/howto/howto_css_login_form_navbar.asp */
+
+.formContainer {
+  background-color: white;
+  border-radius: 5px;
+  margin: auto;
+  padding: 40px;
+  margin-top: 150px;
+  width: 400px;
+  line-height: 200%;
+  
+}
