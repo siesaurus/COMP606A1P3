@@ -22,6 +22,7 @@
 <li><a href="Home.php">Home</a></li>
 <li><a href="LoginPage.php">Login</a></li>
 <li><a href="Registration.php">Register</a></li>
+<li><a href="makeBooking.php">Make a Booking</a></li>
 <li><a href="AboutUs.php">About Us</a></li>
 <li><a href="ContactUs.php">Contact Us</a></li>
 
