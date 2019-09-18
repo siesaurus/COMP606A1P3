@@ -18,7 +18,7 @@ $email = $_POST['Email'];
 $mobile = $_POST['CustNum'];
 $pwd = $_POST['Passwd'];
 $username = $_POST['Username'];
-$cust_motivation = $_POST['Cust_Motivation'];
+$cust_motivation = $_POST['CustMotivation'];
 
 if (mysqli_connect_error()) {
     die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());

@@ -16,12 +16,12 @@
         <form action="Login.php" method="POST">
         <table>
         <tr>
-        <td>Email: </td>
-        <td><input type ="text" placeholder="Email" name = "Email"> </td>
+        <td>Username: </td>
+        <td><input type ="text" placeholder="Username" name = "Username"> </td>
         </tr>
         <tr>
         <td>Password: </td>
-        <td><input type = "password" placeholder="Password" name = "Passwd"></td>
+        <td><input type = "password" placeholder="Password" name = "Password"></td>
         </tr>   
         <tr>
             <td></td>
