@@ -6,7 +6,7 @@
 
 <div class ="formContainer">
 <h1>Site Down </h1>
-<p> We apologize for the inconvenience. Try back soon !</p>
+<p> We apologize for the inconvenience. Try back soon!</p>
 </div>
 
 </body>

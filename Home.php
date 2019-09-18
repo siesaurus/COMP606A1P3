@@ -15,7 +15,7 @@
                 Why Choose Us?
             </h2>   
             <p>
-                Weeeeeeelcome back!
+                
             </p>
 
         </div>
