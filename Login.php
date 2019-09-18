@@ -9,7 +9,7 @@
 include("header.php");
 include("dbconnect.php");
 
-$email = $_POST['Email'];
+$username = $_POST['Email'];
 $pwd = $_POST['Passwd'];
 
 $sql = "SELECT Email, Password from user where email = ?";

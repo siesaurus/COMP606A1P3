@@ -8,7 +8,7 @@ error_reporting(0);
 //sets db login details
 $user = "guest";
 $password = "";
-$database = "reguser";
+$database = "booking_system";
 $host = "localhost";
 
 //connects to mysql

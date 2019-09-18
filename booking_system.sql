@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2019 at 01:25 AM
+-- Generation Time: Sep 18, 2019 at 01:50 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -132,7 +132,8 @@ ALTER TABLE `booking`
 -- Indexes for table `booking_type`
 --
 ALTER TABLE `booking_type`
-  ADD PRIMARY KEY (`booking_type_id`);
+  ADD PRIMARY KEY (`booking_type_id`),
+  ADD KEY `booking_type_id` (`booking_type_id`);
 
 --
 -- Indexes for table `customer`
@@ -185,7 +186,8 @@ ALTER TABLE `therapist`
 --
 ALTER TABLE `booking`
   ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`) ON DELETE NO ACTION ON UPDATE CASCADE,
-  ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`therapist_id`) REFERENCES `therapist` (`therapist_id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+  ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`therapist_id`) REFERENCES `therapist` (`therapist_id`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  ADD CONSTRAINT `booking_ibfk_3` FOREIGN KEY (`booking_type_id`) REFERENCES `booking_type` (`booking_type_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

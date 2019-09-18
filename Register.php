@@ -10,31 +10,35 @@
 <?php 
 include("header.php");
 require_once("dbconnect.php");
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 $fname = $_POST['FirstName'];
 $lname =$_POST['LastName'];
 $email = $_POST['Email'];
+$mobile = $_POST['CustNum'];
 $pwd = $_POST['Passwd'];
+$username = $_POST['Username'];
+$cust_motivation = $_POST['Cust_Motivation'];
 
 if (mysqli_connect_error()) {
     die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
 } 
     else {
-$SELECT = "SELECT Email FROM user WHERE Email = ? LIMIT 1";
-$INSERT = "INSERT INTO user values (?,?,?,?)";
+$SELECT = "SELECT Cust_username FROM customer WHERE Cust_username = ? LIMIT 1";
+$INSERT = "INSERT INTO Customer (cust_firstname, cust_lastname, cust_username, cust_password, cust_email, cust_number, cust_motivation) values (?,?,?,?,?,?,?)";
 
 
 $stmt = $mysqli->prepare($SELECT);
-     $stmt->bind_param("s", $email);
+     $stmt->bind_param("s", $username);
      $stmt->execute();
-     $stmt->bind_result($email);
+     $stmt->bind_result($username);
      $stmt->store_result();
      $rnum = $stmt->num_rows;
      
      if ($rnum==0) {
       $stmt->close();
       $stmt = $mysqli->prepare($INSERT);
-      $stmt->bind_param('ssss',$fname,$lname,$email,$parampwd);
+      $stmt->bind_param('sssssis', $fname, $lname, $username, $parampwd, $email, $mobile, $cust_motivation);
       $parampwd = password_hash($pwd,PASSWORD_DEFAULT);
       $stmt->execute();
       $stmt->close();

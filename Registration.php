@@ -23,10 +23,22 @@
                 <tr>
                     <td>Last name: </td>
                     <td><input type="text" name="LastName"></td>
+                </tr>                
+                <tr>
+                    <td>Mobile number:</td>
+                    <td><input type="int" name="CustNum"></td>
                 </tr>
                 <tr>
                     <td>Email address:</td>
                     <td><input type="text" name="Email"></td>
+                </tr>
+                <tr>
+                    <td>Motivation:</td>
+                    <td><input type="text" name="CustMotivation"></td>
+                </tr>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="Username"></td>
                 </tr>
                 <tr>
                     <td>Password: </td>
