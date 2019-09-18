@@ -78,7 +78,7 @@ CREATE TABLE `customer` (
   `cust_firstname` varchar(20) NOT NULL,
   `cust_lastname` varchar(20) NOT NULL,
   `cust_username` varchar(16) NOT NULL,
-  `cust_password` varchar(20) NOT NULL,
+  `cust_password` varchar(255) NOT NULL,
   `cust_email` varchar(50) NOT NULL,
   `cust_number` int(15) NOT NULL,
   `cust_motivation` varchar(100) NOT NULL,
@@ -104,7 +104,7 @@ CREATE TABLE `therapist` (
   `therapist_lastname` varchar(20) NOT NULL,
   `therapist_username` varchar(20) NOT NULL,
   `therapist_email` varchar(50) NOT NULL,
-  `therapist_password` varchar(20) NOT NULL,
+  `therapist_password` varchar(255) NOT NULL,
   `booking_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

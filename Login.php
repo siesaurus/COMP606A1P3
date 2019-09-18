@@ -21,6 +21,7 @@ if ($stmt = $mysqli->prepare($sql)) {
 
         if($stmt->num_rows == 1) {
             $stmt->bind_result($username, $hashed_password);
+            var_dump($hashed_password);
             
             if ($stmt->fetch()) {
 
