@@ -34,7 +34,7 @@
                 </tr>
                 <tr>
                     <td>Reason for Appointment:</td>
-                    <td><textarea rows="4" cols="50" maxlength="256">
+                    <td><textarea name="Reason" id="Reason" maxlength="256"></textarea></td>
                 </tr>
                 <tr>
                     <td></td>
