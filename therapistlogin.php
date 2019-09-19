@@ -9,9 +9,9 @@
 include("header.php");
 include("dbconnect.php");
 
-$ther_username = $_POST['TherUsername'];
+$ther_username = $_POST['TherEmail'];
 $ther_pwd = $_POST['TherPassword'];
-$sql = "SELECT therapist_username, therapist_password from therapist where therapist_username = ?";
+$sql = "SELECT therapist_email, therapist_password from therapist where therapist_email = ?";
 
 if ($stmt = $mysqli->prepare($sql)) {
     $stmt->bind_param("s", $ther_username);
@@ -28,7 +28,7 @@ if ($stmt = $mysqli->prepare($sql)) {
                 if(password_verify($ther_pwd, $ther_hashed_password)) {
                     session_start();
                     $_SESSION['loggedin'] = true;
-                    $_SESSION['Username'] = $ther_username;
+                    $_SESSION['TherEmail'] = $ther_username;
                     header('location: welcome.php');     
                 } else{ 
                         Echo "<div class=formContainer>";

@@ -17,35 +17,35 @@ $lname =$_POST['LastName'];
 $email = $_POST['Email'];
 $mobile = $_POST['CustNum'];
 $pwd = $_POST['Passwd'];
-$username = $_POST['Username'];
+//$username = $_POST['Username'];
 
 
 if (mysqli_connect_error()) {
     die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
 } 
     else {
-$SELECT = "SELECT Cust_username FROM customer WHERE Cust_username = ? LIMIT 1";
-$INSERT = "INSERT INTO Customer (cust_firstname, cust_lastname, cust_username, cust_password, cust_email, cust_number) values (?,?,?,?,?,?)";
+$SELECT = "SELECT cust_email FROM customer WHERE cust_email = ? LIMIT 1";
+$INSERT = "INSERT INTO Customer (cust_firstname, cust_lastname, cust_password, cust_email, cust_number) values (?,?,?,?, ?)";
 
 
 $stmt = $mysqli->prepare($SELECT);
-     $stmt->bind_param("s", $username);
+     $stmt->bind_param("s", $email);
      $stmt->execute();
-     $stmt->bind_result($username);
+     $stmt->bind_result($email);
      $stmt->store_result();
      $rnum = $stmt->num_rows;
      
      if ($rnum==0) {
       $stmt->close();
       $stmt = $mysqli->prepare($INSERT);
-      $stmt->bind_param('sssssi', $fname, $lname, $username, $parampwd, $email, $mobile);
+      $stmt->bind_param('ssssi', $fname, $lname, $parampwd, $email, $mobile);
       $parampwd = password_hash($pwd,PASSWORD_DEFAULT);
       $stmt->execute();
       $stmt->close();
 
       Echo "<div class=formContainer>";
       echo "Thank you for registering! Please login.<br>";
-      Echo "&nbsp &nbsp<a href=Registration.php><button>Register</button></a>";
+      Echo "&nbsp &nbsp<a href=LoginPage.php><button>Login</button></a>";
       Echo "</div>";
       
      } else {

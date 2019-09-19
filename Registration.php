@@ -11,8 +11,8 @@
 <body>
 <div id="tabs">
 <ul>
-    <li><a href="#tabs-1">Customer Login</a></li>
-    <li><a href="#tabs-2">Therapist Login</a></li>
+    <li><a href="#tabs-1">Customer Registration</a></li>
+    <li><a href="#tabs-2">Therapist Registration</a></li>
 </ul>
 <div id ="tabs-1">
     <div class="formContainer">
