@@ -20,10 +20,11 @@
                     <td>Last name: </td>
                     <td><input type="text" name="LastName"></td>
                 </tr>
+                <!-- Decided to not use
                 <tr>
                     <td>Username:</td>
                     <td><input type="text" name="Username"></td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td>Email address:</td>
                     <td><input type="text" name="Email"></td>
