@@ -18,14 +18,14 @@ $email = $_POST['Email'];
 $mobile = $_POST['CustNum'];
 $pwd = $_POST['Passwd'];
 $username = $_POST['Username'];
-$cust_motivation = $_POST['CustMotivation'];
+
 
 if (mysqli_connect_error()) {
     die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
 } 
     else {
 $SELECT = "SELECT Cust_username FROM customer WHERE Cust_username = ? LIMIT 1";
-$INSERT = "INSERT INTO Customer (cust_firstname, cust_lastname, cust_username, cust_password, cust_email, cust_number, cust_motivation) values (?,?,?,?,?,?,?)";
+$INSERT = "INSERT INTO Customer (cust_firstname, cust_lastname, cust_username, cust_password, cust_email, cust_number) values (?,?,?,?,?,?)";
 
 
 $stmt = $mysqli->prepare($SELECT);
@@ -38,7 +38,7 @@ $stmt = $mysqli->prepare($SELECT);
      if ($rnum==0) {
       $stmt->close();
       $stmt = $mysqli->prepare($INSERT);
-      $stmt->bind_param('sssssis', $fname, $lname, $username, $parampwd, $email, $mobile, $cust_motivation);
+      $stmt->bind_param('sssssi', $fname, $lname, $username, $parampwd, $email, $mobile);
       $parampwd = password_hash($pwd,PASSWORD_DEFAULT);
       $stmt->execute();
       $stmt->close();
