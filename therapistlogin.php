@@ -29,7 +29,7 @@ if ($stmt = $mysqli->prepare($sql)) {
                     session_start();
                     $_SESSION['loggedin'] = true;
                     $_SESSION['Username'] = $ther_username;
-                    header('location: welcome.php');     
+                    header('location: welcomeTherapist.php');     
                 } else{ 
                         Echo "<div class=formContainer>";
                         Echo "The password you entered was incorrect! ";
