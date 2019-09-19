@@ -16,35 +16,35 @@ $ther_fname = $_POST['TherFirstName'];
 $ther_lname =$_POST['TherLastName'];
 $ther_email = $_POST['TherEmail'];
 $ther_pwd = $_POST['TherPassword'];
-$ther_username = $_POST['TherUsername'];
+//$ther_username = $_POST['TherUsername'];
 
 
 if (mysqli_connect_error()) {
     die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
 } 
     else {
-$SELECT = "SELECT therapist_username FROM therapist WHERE therapist_username = ? LIMIT 1";
-$INSERT = "INSERT INTO Therapist (therapist_firstname, therapist_lastname, therapist_username, therapist_email, therapist_password) values (?,?,?,?,?)";
+$SELECT = "SELECT therapist_email FROM therapist WHERE therapist_email = ? LIMIT 1";
+$INSERT = "INSERT INTO Therapist (therapist_firstname, therapist_lastname, therapist_email, therapist_password) values (?,?,?,?)";
 
 
 $stmt = $mysqli->prepare($SELECT);
-     $stmt->bind_param("s", $username);
+     $stmt->bind_param("s", $ther_email);
      $stmt->execute();
-     $stmt->bind_result($username);
+     $stmt->bind_result($ther_email);
      $stmt->store_result();
      $rnum = $stmt->num_rows;
      
      if ($rnum==0) {
       $stmt->close();
       $stmt = $mysqli->prepare($INSERT);
-      $stmt->bind_param('sssss', $ther_fname, $ther_lname, $ther_username, $ther_email, $ther_parampwd);
+      $stmt->bind_param('ssss', $ther_fname, $ther_lname, $ther_email, $ther_parampwd);
       $ther_parampwd = password_hash($ther_pwd,PASSWORD_DEFAULT);
       $stmt->execute();
       $stmt->close();
 
       Echo "<div class=formContainer>";
       echo "Thank you for registering! Please login.<br>";
-      Echo "&nbsp &nbsp<a href=Registration.php><button>Register</button></a>";
+      Echo "&nbsp &nbsp<a href=LoginPage.php><button>Login</button></a>";
       Echo "</div>";
       
      } else {

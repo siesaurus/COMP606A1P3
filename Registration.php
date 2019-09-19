@@ -11,8 +11,8 @@
 <body>
 <div id="tabs">
 <ul>
-    <li><a href="#tabs-1">Customer Login</a></li>
-    <li><a href="#tabs-2">Therapist Login</a></li>
+    <li><a href="#tabs-1">Customer Registration</a></li>
+    <li><a href="#tabs-2">Therapist Registration</a></li>
 </ul>
 <div id ="tabs-1">
     <div class="formContainer">
@@ -36,10 +36,11 @@
                     <td>Email address:</td>
                     <td><input type="text" name="Email"></td>
                 </tr>
+                <!--    Was going to use the usernames, but decided not to.
                 <tr>
                     <td>Username:</td>
                     <td><input type="text" name="Username"></td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td>Password: </td>
                     <td> <input type="password" name="Passwd"></td>
@@ -69,10 +70,11 @@
                     <td>Email address:</td>
                     <td><input type="text" name="TherEmail"></td>
                 </tr>
+                <!-- Was going to use the usernames, but decided not to.
                 <tr>
                     <td>Username:</td>
                     <td><input type="text" name="TherUsername"></td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td>Password: </td>
                     <td> <input type="password" name="TherPassword"></td>

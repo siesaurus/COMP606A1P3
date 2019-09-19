@@ -20,8 +20,8 @@
             <form action="Login.php" method="POST">
                 <table>
                 <tr>
-                <td>Username: </td>
-                <td><input type ="text" placeholder="Username" name = "Username"> </td>
+                <td>Email Address: </td>
+                <td><input type ="text" placeholder="example@thisisnotanemail.com" name = "Email"> </td>
                 </tr>
                 <tr>
                 <td>Password: </td>
@@ -45,8 +45,8 @@
         <form action="therapistlogin.php" method="POST">
         <table>
         <tr>
-        <td>Username: </td>
-        <td><input type ="text" placeholder="Username" name = "TherUsername"> </td>
+        <td>Email Address: </td>
+        <td><input type ="text" placeholder="example@thisisnotanemail.com" name = "TherEmail"> </td>
         </tr>
         <tr>
         <td>Password: </td>
