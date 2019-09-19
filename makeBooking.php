@@ -37,6 +37,16 @@
                     <td><textarea name="Reason" id="Reason" maxlength="256"></textarea></td>
                 </tr>
                 <tr>
+                    <td>What You Need:</td>
+                    <td><select>
+                            <option value="short_massage">Short Massage $40</option>
+                            <option value="medium_massage">Medium Massage $60</option>
+                            <option value="long_massage">Long Massage $80</option>
+                </tr>
+                <tr>
+                    <td>When:
+                </tr>
+                <tr>
                     <td></td>
                     <td><input type="submit" value = "Submit"></td>
                 </tr>
