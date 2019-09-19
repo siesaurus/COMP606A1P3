@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 18, 2019 at 01:50 AM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.7
+-- Generation Time: Sep 19, 2019 at 02:09 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -55,17 +55,18 @@ CREATE TABLE `booking_type` (
   `booking_type_id` int(11) NOT NULL,
   `booking_type_name` varchar(20) NOT NULL,
   `booking_type_desc` varchar(50) NOT NULL,
-  `booking_type_duration` time NOT NULL
+  `booking_type_duration` time NOT NULL,
+  `booking_cost` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `booking_type`
 --
 
-INSERT INTO `booking_type` (`booking_type_id`, `booking_type_name`, `booking_type_desc`, `booking_type_duration`) VALUES
-(4, 'Short Massage', 'Just a short massage', '00:30:00'),
-(5, 'Medium Massage', 'To get those knots out', '00:40:00'),
-(6, 'Long Massage', 'Full body massage with targeted relief', '01:00:00');
+INSERT INTO `booking_type` (`booking_type_id`, `booking_type_name`, `booking_type_desc`, `booking_type_duration`, `booking_cost`) VALUES
+(4, 'Short Massage', 'Just a short massage', '00:30:00', 40),
+(5, 'Medium Massage', 'To get those knots out', '00:40:00', 60),
+(6, 'Long Massage', 'Full body massage with targeted relief', '01:00:00', 80);
 
 -- --------------------------------------------------------
 
@@ -91,6 +92,20 @@ CREATE TABLE `customer` (
 
 INSERT INTO `customer` (`cust_id`, `cust_firstname`, `cust_lastname`, `cust_username`, `cust_password`, `cust_email`, `cust_number`, `cust_motivation`, `booking_id`) VALUES
 (1, 'sally', 'sandbox', 'sallysand', 'sally123', 'sally@sand.com', 221924810, 'sports injury', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `motivation`
+--
+
+CREATE TABLE `motivation` (
+  `motivation_id` int(11) NOT NULL,
+  `motivation_desc` varchar(255) NOT NULL,
+  `booking_id` int(11) NOT NULL,
+  `therapist_id` int(11) NOT NULL,
+  `cust_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -143,6 +158,15 @@ ALTER TABLE `customer`
   ADD KEY `booking_id` (`booking_id`);
 
 --
+-- Indexes for table `motivation`
+--
+ALTER TABLE `motivation`
+  ADD PRIMARY KEY (`motivation_id`),
+  ADD KEY `cust_id` (`cust_id`),
+  ADD KEY `therapist_id` (`therapist_id`),
+  ADD KEY `booking_id` (`booking_id`);
+
+--
 -- Indexes for table `therapist`
 --
 ALTER TABLE `therapist`
@@ -172,6 +196,12 @@ ALTER TABLE `customer`
   MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `motivation`
+--
+ALTER TABLE `motivation`
+  MODIFY `motivation_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `therapist`
 --
 ALTER TABLE `therapist`
@@ -188,6 +218,14 @@ ALTER TABLE `booking`
   ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`) ON DELETE NO ACTION ON UPDATE CASCADE,
   ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`therapist_id`) REFERENCES `therapist` (`therapist_id`) ON DELETE NO ACTION ON UPDATE CASCADE,
   ADD CONSTRAINT `booking_ibfk_3` FOREIGN KEY (`booking_type_id`) REFERENCES `booking_type` (`booking_type_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `motivation`
+--
+ALTER TABLE `motivation`
+  ADD CONSTRAINT `motivation_ibfk_1` FOREIGN KEY (`booking_id`) REFERENCES `customer` (`booking_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `motivation_ibfk_2` FOREIGN KEY (`therapist_id`) REFERENCES `therapist` (`therapist_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `motivation_ibfk_3` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
