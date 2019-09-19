@@ -9,18 +9,18 @@
 include("header.php");
 include("dbconnect.php");
 
-$username = $_POST['Email'];
+$email = $_POST['Email'];
 $pwd = $_POST['Password'];
 $sql = "SELECT cust_email, cust_password from customer where cust_email = ?";
 
 if ($stmt = $mysqli->prepare($sql)) {
-    $stmt->bind_param("s", $username);
+    $stmt->bind_param("s", $email);
     
     if($stmt->execute()) {
         $stmt->store_result();
 
         if($stmt->num_rows == 1) {
-            $stmt->bind_result($username, $hashed_password);
+            $stmt->bind_result($email, $hashed_password);
             var_dump($hashed_password);
             
             if ($stmt->fetch()) {
@@ -28,7 +28,7 @@ if ($stmt = $mysqli->prepare($sql)) {
                 if(password_verify($pwd, $hashed_password)) {
                     session_start();
                     $_SESSION['loggedin'] = true;
-                    $_SESSION['Email'] = $username;
+                    $_SESSION['Email'] = $email;
                     header('location: welcome.php');     
                 } else{ 
                         Echo "<div class=formContainer>";
