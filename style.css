@@ -137,15 +137,15 @@ h2 {
 /*as per w3schools.com https://www.w3schools.com/howto/howto_css_login_form_navbar.asp */
 
 /* The styling for our forms on the website*/
-.formContainer {
+.LoginFormContainer {
   background-color: white;
   border-radius: 5px;
   margin: auto;
-  padding: 40px;
+  padding: 40px; 
   margin-top: 15px;
   width: 400px;
   line-height: 200%; 
-  text-align: center;
+  /*text-align: center;*/
 }
 
 button {
@@ -179,4 +179,36 @@ textarea {
   resize: none;
   width: 177px;
   overflow: auto;
+}
+
+.ui-tabs  {
+  
+  border-radius: 5px;
+  margin: auto;
+  padding: 40px;
+  margin-top: 15px;
+  width:600px;
+  line-height: 200%; 
+  text-align: center;
+}
+
+.tabs-2 {
+  
+  border-radius: 5px;
+  margin: auto;
+  padding: 40px;
+  margin-top: 15px;
+  width: 400px;
+  line-height: 200%; 
+  text-align: center;
+}
+
+.TherapistFormContainer {
+  background-color: white;
+  border-radius: 5px;
+  margin: auto;
+  padding: 40px; 
+  margin-top: 15px;
+  width: 400px;
+  line-height: 200%; 
 }

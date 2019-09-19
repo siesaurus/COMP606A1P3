@@ -13,7 +13,7 @@
     <li><a href="#tabs-2">Therapist Login</a></li>
 </ul>
 <div id ="tabs-1">
-    <div class ="container col-md-4">
+    <!--<div class ="container col-md-4"> -->
         <div class ="LoginFormContainer">
             <h2>Enter your details to login</h2>
 
@@ -34,11 +34,11 @@
                 </table>
             </form>
         </div>
-    </div>
+     <!--</div> -->
 </div>
 <div id = "tabs-2">
 <title>Login</title>
-<div class ="container col-md-4">
+<!--<div class ="container col-md-4"> -->
     <div class ="TherapistFormContainer">
         <h2>Enter your details to login</h2>
 
@@ -59,6 +59,7 @@
         </table>
         </form>
     </div>
+<!--</div> -->
 </div>
 
 </div>
