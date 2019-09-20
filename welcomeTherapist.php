@@ -31,12 +31,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
     
     <?php 
-    $sql = "SELECT * FROM booking";
+    $sql = "SELECT booking_starttime,booking_end, booking_date FROM booking";
     $result = mysqli_query($mysqli, $sql);
     
-    while($row = mysqli_fetch_array($result)){
-            echo ($result);
-        }
+    $row = $result->fetch_assoc();
+    printf ("booking_starttime = %s (%s)\n", $row['booking_starttime'], gettype($row['booking_starttime']));
+    printf ("booking_end = %s (%s)\n", $row['booking_end'],gettype($row['booking_end']));
+    printf ("booking_date = %s (%s)\n", $row['booking_date'],gettype($row['booking_date']));
     ?>    
     
     
