@@ -223,3 +223,21 @@ textarea {
   line-height: 200%; 
   text-align: center;
 }
+
+.para-1 {
+  padding: 20px;
+  margin-top: 15px;
+  width: 700px;
+  line-height: 120%;
+  margin: auto;
+  /* margin-bottom: 15px; */
+  text-align: center;
+}
+
+.pic-container {
+  width: 900px;
+  text-align:center;
+  padding: 10px;
+}
+
+
