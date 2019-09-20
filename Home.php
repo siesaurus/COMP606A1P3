@@ -29,9 +29,9 @@
             <!-- Royalty free physio pics from https://www.dreamstime.com/photos-images/physiotherapy.html -->
             <div class="pic-container">
                 <div class="pics">
-                    <img src="Assets/pic1.jpg" alt="physio-pic"  height="125" width="250">                                              
-                    <img src="Assets/pic3.jpg" alt="physio-pic"  height="125" width="300">                                       
-                    <img src="Assets/pic2.jpg" alt="physio-pic"  height="125" width="250">                                    
+                    <img src="Assets/pic1.jpg" alt="physio-pic"  height="150" width="250">                                              
+                    <img src="Assets/pic3.jpg" alt="physio-pic"  height="150" width="300">                                       
+                    <img src="Assets/pic2.jpg" alt="physio-pic"  height="150" width="250">                                    
                  </div>
 
              </div>    
@@ -39,12 +39,36 @@
                 What we offer...
             </h2>
 
-            <div class="para-1">
-                <p>
-                Short Massage
-                Medium Massage
-                Long Massage
-                </p>
+            <div class="para-2">
+                
+                    <div class="row">
+                    <div class="col">
+                    <h3>Short Massage</h3>
+                    <p style="text-align: justify;">
+                        For when its just a small amount of work needed
+                        on your muscles, light work done to get you through the 
+                        day. Popular among professional athletes
+                        looking to get the best recovery. </p><p style="text-align: center;"><b>$40</b>
+                    </p>
+                    </div>
+                    <div class="col">            
+                    <h3>Medium Massage</h3>
+                    <p style="text-align: justify">
+                        The middle ground massage, if there's a moderate amount
+                        of work that needs done on a larger muscle group for
+                        your body (such as a sprain or minor injury), this is the choice for you. </p><p style="text-align: center;"> <b>$60</b>
+                    </p>
+                    </div>
+                    <div class="col">
+                    <h3>Long Massage</h3>
+                    <p style="text-align: justify;">
+                        This massage is for heavy rehabilitation, if you need to 
+                        have some major therapy done or need help to function 
+                        properly, we recommend this one. It will change your 
+                        life. </p><p style="text-align: center;"> <b>$80</b>
+                    </div>
+                    </div>
+                
             </div>
         </div>
         
