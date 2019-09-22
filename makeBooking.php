@@ -1,5 +1,8 @@
-<?php include("header.php");?>
+<?php include("header.php");
 
+
+?>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 <link ref style.css>
 <!DOCTYPE html>
 <title>Make a Booking</title>
@@ -11,48 +14,40 @@
 
 <form action="processBooking.php" method="POST">
 
-<table>
-                <tr>
-                    <td>First name: </td>
-                    <td><input type="text" name="FirstName"></td>
-                </tr>
-                <tr>
-                    <td>Last name: </td>
-                    <td><input type="text" name="LastName"></td>
-                </tr>
-                <!-- Decided to not use
-                <tr>
-                    <td>Username:</td>
-                    <td><input type="text" name="Username"></td>
-                </tr> -->
-                <tr>
-                    <td>Email address:</td>
-                    <td><input type="text" name="Email"></td>
-                </tr>
-                <tr>
-                    <td>Password: </td>
-                    <td> <input type="password" name="Passwd"></td>
-                </tr>
-                <tr>
-                    <td>Reason for Appointment:</td>
-                    <td><textarea name="Reason" id="Reason" maxlength="256"></textarea></td>
-                </tr>
-                <tr>
-                    <td>What You Need:</td>
-                    <td><select>
-                            <option value="short_massage">Short Massage $40</option>
-                            <option value="medium_massage">Medium Massage $60</option>
-                            <option value="long_massage">Long Massage $80</option>
-                </tr>
-                <tr>
-                    <td>When:
-                </tr>
+<div class = "bkContainer">
+    <label>First name: </label><br>
+    <input type="text"  name="FirstName" required><br>
+
+    <label>Last name: </label><br>
+    <input type="text" name="LastName" required><br>
+
+    <label>Email address:</label><br>
+    <input type="text" name="Email"><br>
+
+    <label>Therapist:</label><br>
+		<select id="therapist" name="Therapist" onChange="getDate(this.value);" ><br>
+		<option value="">Select Therapist</option><br><br><br>
+
+    <label>Reason for Appointment:</label><br>
+    <textarea name="Reason" id="Reason" maxlength="256"></textarea><br>
+
+    <label>What You Need:</label><br><br><br>
+    <select id="massageType" name ="Massage Type">
+            <option value="short_massage">Short Massage $40</option>
+            <option value="medium_massage">Medium Massage $60</option>
+            <option value="long_massage">Long Massage $80</option>
+
+
+    <label>Date of Visit:</label><br>
+		<input type="date" name="dov" onChange="getDay(this.value);" min="<?php echo date('Y-m-d');?>" max="<?php echo date('Y-m-d',strtotime('+7 day'));?>" required><br><br>
+		<div id="datestatus"> </div><br>
+    </tr>
                 <tr>
                     <td></td>
                     <td><input type="submit" value = "Submit"></td>
                 </tr>
                 
-</table>
+</div>
 </form>
 </div>
 

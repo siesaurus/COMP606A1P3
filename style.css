@@ -265,3 +265,28 @@ textarea {
  .row {
    flex-wrap: wrap;
  }
+
+label{
+  display : inline;
+  padding-right : 4px;
+ }
+
+ option{
+	width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+bkContainer{
+	padding: 12px;
+	position:absolute;
+	left:30%;
+	right:30%;
+	top:12%;
+	border:2px solid white;
+	border-collapse:collapse;
+	background:grey;
+}
