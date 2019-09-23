@@ -47,7 +47,7 @@
     <br>
 
     <label>Date of Visit:</label><br>
-		<input type="date" name="dov" onChange="getDay(this.value);" min="<?php echo date('Y-m-d');?>" max="<?php echo date('Y-m-d',strtotime('+7 day'));?>" required><br><br>
+		<input type="datetime-local" name="dov" onChange="getDay(this.value);" min="<?php echo date('Y-m-d');?>" max="<?php echo date('Y-m-d',strtotime('+7 day'));?>" required><br><br>
 		<div id="datestatus"> </div><br>
     </tr>
                 <tr>
