@@ -13,3 +13,25 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<title>Welcome <?php echo $_SESSION['Email'] ?></title>
+
+<body>
+
+<div class ="mainContent" id="mainCon">
+<div class="page-header">
+<h2> Welcome <?php echo $_SESSION['Email'] ?></h2>
+</div>
+
+<?php
+    $sql = "SELECT booking_starttime FROM booking b join customer c ON c.cust_email = b.cust_email where c.cust_email = '$_SESSION[Email]'";
+    $result = mysqli_query($mysqli, $sql);
+
+    while($row = mysqli_fetch_assoc($result)){
+        printf ("booking_starttime = %s (%s)\n", $row['booking_starttime'], gettype($row['booking_starttime']));
+    }
+
+    echo "<a href=deleteBookings.php><div class=\"bigButton\"><button style=\"background-color:red;\">DELETE ALL BOOKINGS</button></div></a>"
+?>
+</div>
+</body>
