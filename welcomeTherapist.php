@@ -1,6 +1,5 @@
 <?php
-
-// As per https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php welcome.php
+//displays the bookings associated with the logged in therapist
 //Uses session info from login.php to display user email as confirmation
 //Provides logout option
 include ("header.php");

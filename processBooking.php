@@ -1,4 +1,6 @@
 <?php
+//takes the information from the make booking page through POST to first check if any bookings exist with the selected time
+//if no bookings exist, inserts into the booking table the appropriate particulars
 
 include("header.php");
 require_once("dbconnect.php");
