@@ -1,3 +1,6 @@
+
+
+
 <!-- 
     Navbar with the available, easily accessible buttons 
     Features navbar login which directs to login.php also
@@ -20,11 +23,34 @@
  -->
 <ul>
 <li><a href="Home.php">Home</a></li>
-<li><a href="LoginPage.php">Login</a></li>
+<!-- <li><a href="LoginPage.php">Login</a></li> -->
 <li><a href="Registration.php">Register</a></li>
-<li><a href="makeBooking.php">Make a Booking</a></li>
+
+<?php
+// Check if the user is logged in, if yes show this booking nav
+if(isset($_SESSION["loggedin"]) == true){
+    echo "<li><a href=\"makeBooking.php\">Make a Booking</a></li>";
+} 
+?>
+
+<?php
+// Check if the user is logged in, if no, show this login nav
+if(isset($_SESSION["loggedin"]) == false){
+    echo "<li><a href=\"LoginPage.php\">Login</a></li> ";
+} 
+?>
+
+
 <li><a href="AboutUs.php">About Us</a></li>
 <li><a href="ContactUs.php">Contact Us</a></li>
+
+<?php
+//if the user is logged in, show this nav
+if(isset($_SESSION["loggedin"])== true){
+    echo "<li><a href=\"logout.php\">Logout</a></li>";
+}
+?>
+
 
 
 </ul>

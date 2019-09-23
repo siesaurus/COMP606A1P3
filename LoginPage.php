@@ -27,8 +27,6 @@
                 <td>Password: </td>
                 <td><input type = "password" placeholder="Password" name = "Password"></td>
                 </tr>   
-                <tr>
-                <td></td>
                 <td><input type = "submit" value ="Login"></td>
                 </tr>
                 </table>
@@ -52,8 +50,6 @@
         <td>Password: </td>
         <td><input type = "password" placeholder="Password" name = "TherPassword"></td>
         </tr>   
-        <tr>
-            <td></td>
         <td><input type = "submit" value ="Login"></td>
         </tr>
         </table>

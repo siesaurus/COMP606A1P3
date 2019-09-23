@@ -2,7 +2,12 @@
     Header - includes nav.php on all pages where referenced and design features.  
  -->
 <?php
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 include("nav.php");
+
 // in the <style> tag below we generate css rules for body and h1 tags
 //as per in class examples
 ?>
