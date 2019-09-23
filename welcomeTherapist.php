@@ -5,7 +5,7 @@
 //Provides logout option
 include ("header.php");
 include ("dbconnect.php");
-include ("bookings.php");
+
 // Initialize the session
 //session_start();
  
@@ -37,11 +37,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
     
     <?php 
-    $sql = "SELECT booking_starttime FROM booking b join therapist t ON b.therapist_firstname = t.therapist_firstname where t.therapist_email = '$_SESSION[TherEmail]'";
+    $sql = "SELECT booking_starttime,cust_email FROM booking b join therapist t ON b.therapist_firstname = t.therapist_firstname where t.therapist_email = '$_SESSION[TherEmail]'";
     $result = mysqli_query($mysqli, $sql);
-    
-    $row = $result->fetch_assoc();
-    printf ("booking_starttime = %s (%s)\n", $row['booking_starttime'], gettype($row['booking_starttime']));
+
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+            Echo "<div class=bkingsContainer>";
+            echo "Customer Email: " . $row["cust_email"]. "<br>Booking Start Time: " . $row["booking_starttime"]. "<br><br>";
+        Echo "</div>";
+        }
+    }
     ?>    
 
 

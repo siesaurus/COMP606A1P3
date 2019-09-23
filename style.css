@@ -305,6 +305,18 @@ label{
   text-align: center;
 }
 
+.bkingsContainer {
+  background-color: thistle;
+  border-radius: 5px;
+  margin: auto;
+  padding: 40px; 
+  margin-top: 15px;
+  width: 600px;
+  line-height: 200%; 
+  text-align: center;
+}
+
+
 .bksubmit input[type=submit] {
   border-radius: 5px;
   display: block;
