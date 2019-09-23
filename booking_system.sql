@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2019 at 03:14 AM
+-- Generation Time: Sep 23, 2019 at 07:41 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -31,18 +31,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `booking` (
   `booking_id` int(11) NOT NULL,
   `cust_email` varchar(50) NOT NULL,
-  `therapist_email` varchar(50) NOT NULL,
+  `therapist_firstname` varchar(50) NOT NULL,
   `booking_starttime` datetime NOT NULL,
-  `booking_type_name` varchar(50) NOT NULL
+  `booking_type_name` varchar(50) NOT NULL,
+  `motivation` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `booking`
 --
 
-INSERT INTO `booking` (`booking_id`, `cust_email`, `therapist_email`, `booking_starttime`, `booking_type_name`) VALUES
-(1, '1', '1', '2019-09-12 16:00:00', '5'),
-(2, '2', '2', '2019-09-20 16:00:00', '5');
+INSERT INTO `booking` (`booking_id`, `cust_email`, `therapist_firstname`, `booking_starttime`, `booking_type_name`, `motivation`) VALUES
+(1, '1', '1', '2019-09-12 16:00:00', '5', ''),
+(2, '2', '2', '2019-09-20 16:00:00', '5', '');
 
 -- --------------------------------------------------------
 
@@ -140,7 +141,7 @@ INSERT INTO `therapist` (`therapist_id`, `therapist_firstname`, `therapist_lastn
 ALTER TABLE `booking`
   ADD PRIMARY KEY (`booking_id`),
   ADD KEY `cust_email` (`cust_email`),
-  ADD KEY `therapist_email` (`therapist_email`),
+  ADD KEY `therapist_email` (`therapist_firstname`),
   ADD KEY `booking_type_name` (`booking_type_name`);
 
 --
