@@ -19,7 +19,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome, <?php echo $_SESSION['Email'] ?></title>
+    <title>Welcome, <?php echo $_SESSION['TherEmail'] ?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
         body{ font: 14px sans-serif; text-align: center; }
@@ -27,17 +27,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
     <div class="page-header">
-        <h1>Welcome, <?php echo $_SESSION['Username'] ?></h1>
+        <h1>Welcome, <?php echo $_SESSION['TherEmail'] ?></h1>
     </div>
     
     <?php 
-    $sql = "SELECT booking_starttime,booking_end, booking_date FROM booking";
+    $sql = "SELECT booking_starttime FROM booking b join therapist t ON b.therapist_firstname = t.therapist_firstname where t.therapist_email = '$_SESSION[TherEmail]'";
     $result = mysqli_query($mysqli, $sql);
     
     $row = $result->fetch_assoc();
     printf ("booking_starttime = %s (%s)\n", $row['booking_starttime'], gettype($row['booking_starttime']));
-    printf ("booking_end = %s (%s)\n", $row['booking_end'],gettype($row['booking_end']));
-    printf ("booking_date = %s (%s)\n", $row['booking_date'],gettype($row['booking_date']));
+
     ?>    
     
     
