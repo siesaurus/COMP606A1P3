@@ -1,13 +1,14 @@
-<?php include("header.php");
 
-
-?>
+<?php include("header.php");?>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 <link ref style.css>
+<!-- booking form to make a booking
+takes the input data and uses processBooking to insert data into booking table -->
+
 <!DOCTYPE html>
 <title>Make a Booking</title>
 <html>
-    <body>
+<body>
 
 <div class="bookingFormContainer">
 <h2>Make a booking</h2>
