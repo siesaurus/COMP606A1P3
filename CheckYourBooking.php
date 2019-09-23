@@ -32,8 +32,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     $sql = "SELECT booking_starttime FROM booking b join customer c ON c.cust_email = b.cust_email where c.cust_email = '$_SESSION[Email]'";
     $result = mysqli_query($mysqli, $sql);
 
-    while($row = mysqli_fetch_assoc($result)){
-        printf ("booking_starttime = %s (%s)\n", $row['booking_starttime'], gettype($row['booking_starttime']));
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+            Echo "<div class=bkingsContainer>";
+            echo "<br>Booking Start Time: " . $row["booking_starttime"]. "<br><br>";
+            Echo "</div>";
+        }
     }
 
     echo "<a href=deleteBooking.php><div class=\"bigButton\"><button style=\"background-color:red;\">DELETE ALL BOOKINGS</button></div></a>"
