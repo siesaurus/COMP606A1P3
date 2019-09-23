@@ -32,7 +32,7 @@
     <textarea name="Reason" id="Reason" maxlength="256"></textarea><br>
 
     <label>What You Need:</label><br><br><br>
-    <select id="massageType" name ="Massage Type">
+    <select id="massageType" name ="MassageType">
             <option value="short_massage">Short Massage $40</option>
             <option value="medium_massage">Medium Massage $60</option>
             <option value="long_massage">Long Massage $80</option>
