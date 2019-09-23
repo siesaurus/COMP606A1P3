@@ -23,8 +23,18 @@
  -->
 <ul>
 <li><a href="Home.php">Home</a></li>
-<!-- <li><a href="LoginPage.php">Login</a></li> -->
-<li><a href="Registration.php">Register</a></li>
+
+
+
+
+
+<?php
+// Check if the user is logged in, if no, show this login nav
+if(isset($_SESSION["loggedin"]) == false){
+    echo "<li><a href=\"Registration.php\">Register</a></li>";
+} 
+?>
+
 
 <?php
 // Check if the user is logged in, if yes show this booking nav
