@@ -1,7 +1,8 @@
 <?php include("header.php");?>
 <!DOCTYPE html>
 <html>
-
+<!-- Page to show fake contact details and a google map location embed as 
+an extra source of credibility. -->
 <body>
 
 <div class ="mainContent" id="mainCon">

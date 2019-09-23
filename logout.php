@@ -1,6 +1,7 @@
 <!-- 
-    Logout feature which is available on the welcome page 
-    Should also include on other pages
+    Logout feature which is available on the home page, destroys the 
+    session and sends the user back to the home page.
+    
  -->
 
 <?php

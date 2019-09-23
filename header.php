@@ -8,9 +8,9 @@
     } 
 include("nav.php");
 
-// in the <style> tag below we generate css rules for body and h1 tags
-//as per in class examples
 ?>
+
+<!-- The links to all of our stylesheets and different resources we used. -->
 
 <!doctype html>
 <html lang="en">
@@ -27,6 +27,7 @@ include("nav.php");
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
+    //script to create the tabs for the login and registration pages
   $( function() {
     $( "#tabs" ).tabs();
   } );

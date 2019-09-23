@@ -1,14 +1,13 @@
 <?php
 //displays the bookings associated with the logged in therapist
 //Uses session info from login.php to display user email as confirmation
-//Provides logout option
 include ("header.php");
 include ("dbconnect.php");
 
 // Initialize the session
 //session_start();
  
-// Check if the user is logged in, if not then redirect him to login page
+// Check if the user is logged in, if not then redirect them to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;

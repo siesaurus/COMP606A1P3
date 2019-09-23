@@ -1,5 +1,10 @@
 <?php
 
+
+/*
+This page checks whether the user has any bookings with the website, if they
+do it will be displayed on this page, it can also be deleted from this page also.
+*/
 include ("header.php");
 include ("dbconnect.php");
  
@@ -31,7 +36,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         printf ("booking_starttime = %s (%s)\n", $row['booking_starttime'], gettype($row['booking_starttime']));
     }
 
-    echo "<a href=deleteBookings.php><div class=\"bigButton\"><button style=\"background-color:red;\">DELETE ALL BOOKINGS</button></div></a>"
+    echo "<a href=deleteBooking.php><div class=\"bigButton\"><button style=\"background-color:red;\">DELETE ALL BOOKINGS</button></div></a>"
 ?>
 </div>
 </body>

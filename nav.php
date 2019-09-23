@@ -1,9 +1,8 @@
-
-
-
 <!-- 
-    Navbar with the available, easily accessible buttons 
-    Features navbar login which directs to login.php also
+    Navbar for all of the pages on the website, it creates the 
+    navigation links for all of the pages.  Some are hidden behind PHP
+    IF statments which determine whether the user is logged in 
+    with a SESSION or not, to display or not display those links.
  -->
 <div class ="topnav" id="navbarNav">
 
@@ -71,20 +70,6 @@ if(isset($_SESSION["loggedin"])== true){
 </ul>
 </div>
 </div>
-<!--
-    Commented out for now as we already have a login link? 
-    Can always put it back in later.
- -->
-<!--
-<div class="login-container">
-<form action="Login.php" method = "POST">
-
-<input type ="text" placeholder="Email" name = "Email">
-<input type = "password" placeholder="Password" name = "Passwd">
-<button type = "submit">Login</button>
-</form>
-</div>
--->
 </div>
 
 

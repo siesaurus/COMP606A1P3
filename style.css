@@ -156,6 +156,7 @@ h3 {
   /*text-align: center;*/
 }
 
+/* Styles the regular buttons */
 button {
   border-radius: 5px;
   margin: auto;
@@ -164,14 +165,17 @@ button {
   position: center;
 }
 
+/* styles the input type=text  */
 input[type=text] {
   border-radius: 2px;
 }
 
+/* styles the input type=password  */
 input[type=password] {
   border-radius: 2px;
 }
 
+/* styles the input type=submit  */
 input[type=submit] {
   border-radius: 5px;
   display: block;
@@ -182,6 +186,7 @@ input[type=submit] {
   text-align: center;
 }
 
+/* styles the text area */
 textarea {
   height: 50px;
   border-radius: 2px;
@@ -190,6 +195,7 @@ textarea {
   overflow: auto;
 }
 
+/* Styles the UI tabs */
 .ui-tabs  {
   
   border-radius: 5px;
@@ -201,6 +207,7 @@ textarea {
   text-align: center;
 }
 
+/* Styles the tabs in the bootstrap */
 .tabs-2 {
   
   border-radius: 5px;
@@ -212,6 +219,7 @@ textarea {
   text-align: center;
 }
 
+/* styles the form container for therapist */
 .TherapistFormContainer {
   background-color: white;
   border-radius: 5px;
@@ -222,6 +230,7 @@ textarea {
   line-height: 200%; 
 }
 
+/* Default style form container  */
 .formContainer {
   background-color: white;
   border-radius: 5px;
@@ -233,6 +242,7 @@ textarea {
   text-align: center;
 }
 
+/* Style for paragraph one div */
 .para-1 {
   padding: 20px;
   margin-top: 15px;
@@ -243,17 +253,20 @@ textarea {
   text-align: center;
 }
 
+/* Style for pic container div */
 .pic-container {
   width: 900px;
   text-align:center;
   padding: 10px;
 }
 
+/* styling of the columns */
 .col {
   
   text-align: center;
 }
 
+/* Styling of paragraph 2 div */
 .para-2 {
   padding: 20px;
   margin-top: 15px;
@@ -263,15 +276,19 @@ textarea {
   /* margin-bottom: 15px; */
   
 }
+
+/* Styling of the row bootstrap div */
  .row {
    flex-wrap: wrap;
  }
 
+ /* styling of the labels */
 label{
   display : inline;
   padding-right : 4px;
  }
 
+ /* Styling of option */
  option{
 	width: 100%;
     padding: 12px 20px;
@@ -294,6 +311,7 @@ label{
 }
 */
 
+/* styling of booking form container */
 .bookingFormContainer {
   background-color: white;
   border-radius: 5px;
@@ -305,6 +323,7 @@ label{
   text-align: center;
 }
 
+/* styling of bkingscontainer div */
 .bkingsContainer {
   background-color: thistle;
   border-radius: 5px;
@@ -316,7 +335,7 @@ label{
   text-align: center;
 }
 
-
+/* Styling of bksubmit class */
 .bksubmit input[type=submit] {
   border-radius: 5px;
   display: block;
@@ -327,6 +346,7 @@ label{
   text-align: center;
 }
 
+/* styling of the big button for deleting */
 .bigButton {
   border-radius: 5px;
   margin-left: 5%;
@@ -336,6 +356,7 @@ label{
   
 }
 
+/* Styling of the map wrapper */
 .mapWrapper {
   margin-left: 15%;
 }

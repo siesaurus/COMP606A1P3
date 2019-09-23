@@ -1,4 +1,5 @@
 <?php
+/* Deletes the bookings from the customer with the correct email */
 include("header.php");
 include("dbconnect.php");
 

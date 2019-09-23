@@ -1,9 +1,7 @@
 <?php
 
-// As per https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php welcome.php
-//Uses session info from login.php to display user email as confirmation
-//Provides logout option
-
+//lets the user know their login was successful and allows them to use a button to 
+//go to the homepage or can use the nav page.
 // Initialize the session
 session_start();
 ?>

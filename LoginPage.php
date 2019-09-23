@@ -1,6 +1,8 @@
 <!-- 
     Login page form
-    Has user inputs for email address and password - submit button actions login.php
+    Tabs alternate between the user and therapist login, 
+    each has its own separate submit buttons which will check from the correct
+    databases.
  -->
 <?php include("header.php");?>
 <!DOCTYPE html>
